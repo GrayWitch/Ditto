@@ -1,44 +1,66 @@
-<Ditto_Theme_File Version = "3" Author = "Yaroslav Kargin" Notes = "www.nordtheme.com">
+<Ditto_Theme_File Version = "3" Author = "Yaroslav Kargin &amp; Ditto Modern" Notes = "www.nordtheme.com">
 
 	<CaptionLeft>RGB(46, 52, 64)</CaptionLeft>
-	<CaptionRight>RGB(46, 52, 64)</CaptionRight>	
-	
+	<CaptionRight>RGB(46, 52, 64)</CaptionRight>
+
 	<CaptionLeftTopMost>RGB(46, 52, 64)</CaptionLeftTopMost>
 	<CaptionRightTopMost>RGB(46, 52, 64)</CaptionRightTopMost>
-	
-	<CaptionLeftNotConnected>RGB(49, 55, 66)</CaptionLeftNotConnected>
-	<CaptionRightNotConnected>RGB(49, 55, 66)</CaptionRightNotConnected>
-	
-	<CaptionTextColor>RGB(160, 197, 146)</CaptionTextColor>
-	
-	<ListBoxOddRowsBG>RGB(49, 55, 66)</ListBoxOddRowsBG>
-	<ListBoxEvenRowsBG>RGB(49, 55, 66)</ListBoxEvenRowsBG>
-	
-	<ListBoxOddRowsText>RGB(124, 167, 170)</ListBoxOddRowsText>
-	<ListBoxEvenRowsText>RGB(124, 167, 170)</ListBoxEvenRowsText>
-	
-	<ListBoxSelectedBG>RGB(59, 66, 81)</ListBoxSelectedBG>
-	<ListBoxSelectedNoFocusBG>RGB(61, 71, 89)</ListBoxSelectedNoFocusBG>
-	
-	<ListBoxSelectedText>RGB(214, 221, 232)</ListBoxSelectedText>
-	<ListBoxSelectedNoFocusText>RGB(214, 220, 231)</ListBoxSelectedNoFocusText>	
-	
-	<Border>RGB(49, 55, 66)</Border>
-	<BorderTopMost>RGB(49, 55, 66)</BorderTopMost>
-	<BorderNotConnected>RGB(49, 55, 66)</BorderNotConnected>	
-	
-	<GroupTreeBG>RGB(49, 55, 66)</GroupTreeBG>
-	<GroupTreeText>RGB(214, 221, 232)</GroupTreeText>
-	
-	<CaptionSize>18</CaptionSize>
-	<CaptionFontSize>15</CaptionFontSize>
+
+	<CaptionLeftNotConnected>RGB(46, 52, 64)</CaptionLeftNotConnected>
+	<CaptionRightNotConnected>RGB(191, 97, 106)</CaptionRightNotConnected>
+
+	<CaptionTextColor>RGB(236, 239, 244)</CaptionTextColor>
+
+	<MainWindowBG>RGB(46, 52, 64)</MainWindowBG>
+
+	<ListBoxOddRowsBG>RGB(59, 66, 82)</ListBoxOddRowsBG>
+	<ListBoxEvenRowsBG>RGB(59, 66, 82)</ListBoxEvenRowsBG>
+
+	<ListBoxOddRowsText>RGB(216, 222, 233)</ListBoxOddRowsText>
+	<ListBoxEvenRowsText>RGB(216, 222, 233)</ListBoxEvenRowsText>
+
+	<ListBoxSelectedBG>RGB(129, 161, 193)</ListBoxSelectedBG>
+	<ListBoxSelectedNoFocusBG>RGB(67, 76, 94)</ListBoxSelectedNoFocusBG>
+
+	<ListBoxSelectedText>RGB(255, 255, 255)</ListBoxSelectedText>
+	<ListBoxSelectedNoFocusText>RGB(236, 239, 244)</ListBoxSelectedNoFocusText>
+
+	<ListCardBG>RGB(59, 66, 82)</ListCardBG>
+	<ListCardHoverBG>RGB(67, 76, 94)</ListCardHoverBG>
+	<ListCardBorder>RGB(76, 86, 106)</ListCardBorder>
+	<ListCardSelectedBorder>RGB(136, 192, 208)</ListCardSelectedBorder>
+
+	<ListHotKeyBadgeBG>RGB(67, 76, 94)</ListHotKeyBadgeBG>
+	<ListHotKeyBadgeText>RGB(216, 222, 233)</ListHotKeyBadgeText>
+	<ListHotKeyBadgeBorder>RGB(76, 86, 106)</ListHotKeyBadgeBorder>
+	<ListSmallQuickPasteIndexColor>RGB(143, 188, 187)</ListSmallQuickPasteIndexColor>
+
+	<Border>RGB(67, 76, 94)</Border>
+	<BorderTopMost>RGB(67, 76, 94)</BorderTopMost>
+	<BorderNotConnected>RGB(191, 97, 106)</BorderNotConnected>
+
+	<GroupTreeBG>RGB(46, 52, 64)</GroupTreeBG>
+	<GroupTreeText>RGB(216, 222, 233)</GroupTreeText>
+
+	<CaptionSize>26</CaptionSize>
+	<CaptionFontSize>16</CaptionFontSize>
 
 	<DescriptionWindowBG>RGB(46, 52, 64)</DescriptionWindowBG>
-	<DescriptionWindowText>RGB(214, 221, 232)</DescriptionWindowText>
-	
-	<MainWindowBG>RGB(49, 55, 66)</MainWindowBG>
-	
-	<SearchTextBoxFocusBG>RGB(46, 52, 64)</SearchTextBoxFocusBG>
-	<SearchTextBoxFocusText>RGB(214, 221, 232)</SearchTextBoxFocusText>
-	
+	<DescriptionWindowText>RGB(236, 239, 244)</DescriptionWindowText>
+
+	<SearchTextBoxBG>RGB(59, 66, 82)</SearchTextBoxBG>
+	<SearchTextBoxBorder>RGB(76, 86, 106)</SearchTextBoxBorder>
+	<SearchTextBoxHoverBorder>RGB(136, 192, 208)</SearchTextBoxHoverBorder>
+	<SearchTextBoxFocusBG>RGB(59, 66, 82)</SearchTextBoxFocusBG>
+	<SearchTextBoxFocusText>RGB(236, 239, 244)</SearchTextBoxFocusText>
+	<SearchTextBoxFocusBorder>RGB(136, 192, 208)</SearchTextBoxFocusBorder>
+	<SearchTextBoxPromptText>RGB(143, 188, 187)</SearchTextBoxPromptText>
+
+	<ClipPastedColor>RGB(163, 190, 140)</ClipPastedColor>
+	<SearchTextHighlight>RGB(235, 203, 139)</SearchTextHighlight>
+
+	<ScrollBarTrack>RGB(46, 52, 64)</ScrollBarTrack>
+	<ScrollBarThumb>RGB(76, 86, 106)</ScrollBarThumb>
+	<ScrollBarThumbHover>RGB(94, 106, 130)</ScrollBarThumbHover>
+
 </Ditto_Theme_File>

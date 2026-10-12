@@ -39,6 +39,20 @@ public:
 	COLORREF SearchTextBoxFocusBorder() const { return m_searchTextBoxFocusBorder; }
 	COLORREF SearchTextHighlight() const { return m_searchTextHighlight; }
 
+	// Modern card & badge colors
+	COLORREF ListCardBG() const { return m_listCardBG; }
+	COLORREF ListCardHoverBG() const { return m_listCardHoverBG; }
+	COLORREF ListCardBorder() const { return m_listCardBorder; }
+	COLORREF ListCardSelectedBorder() const { return m_listCardSelectedBorder; }
+	COLORREF ListHotKeyBadgeBG() const { return m_listHotKeyBadgeBG; }
+	COLORREF ListHotKeyBadgeText() const { return m_listHotKeyBadgeText; }
+	COLORREF ListHotKeyBadgeBorder() const { return m_listHotKeyBadgeBorder; }
+	COLORREF SearchTextBoxBG() const { return m_searchTextBoxBG; }
+	COLORREF SearchTextBoxBorder() const { return m_searchTextBoxBorder; }
+	COLORREF SearchTextBoxHoverBorder() const { return m_searchTextBoxHoverBorder; }
+	COLORREF SearchTextBoxPromptText() const { return m_searchTextBoxPromptText; }
+	bool IsDarkMode() const;
+
 	COLORREF GroupTreeBG() const { return m_groupTreeBG; }
 	COLORREF GroupTreeText() const { return m_groupTreeText; }
 
@@ -105,6 +119,19 @@ protected:
 	COLORREF m_scrollBarThumbHover;
 	COLORREF m_scrollBarTrack;
 
+	// Modern card & badge colors
+	COLORREF m_listCardBG;
+	COLORREF m_listCardHoverBG;
+	COLORREF m_listCardBorder;
+	COLORREF m_listCardSelectedBorder;
+	COLORREF m_listHotKeyBadgeBG;
+	COLORREF m_listHotKeyBadgeText;
+	COLORREF m_listHotKeyBadgeBorder;
+	COLORREF m_searchTextBoxBG;
+	COLORREF m_searchTextBoxBorder;
+	COLORREF m_searchTextBoxHoverBorder;
+	COLORREF m_searchTextBoxPromptText;
+
 	int m_captionSize;
 	int m_captionFontSize;
 
@@ -117,4 +144,5 @@ protected:
 	CString m_lastTheme;
 
 	void LoadDefaults();
+	void ApplyFallbacks();
 };

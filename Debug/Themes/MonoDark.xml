@@ -1,33 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Ditto_Theme_File Version="3" Author="dcog989" Notes="MonoDark">
-	<CaptionLeft>RGB(85,85,85)</CaptionLeft>
-	<CaptionRight>RGB(68,68,68)</CaptionRight>
-	<CaptionLeftTopMost>RGB(85,85,85)</CaptionLeftTopMost>
-	<CaptionRightTopMost>RGB(51,51,51)</CaptionRightTopMost>
-	<CaptionLeftNotConnected>RGB(237,94,94)</CaptionLeftNotConnected>
-	<CaptionRightNotConnected>RGB(237,94,94)</CaptionRightNotConnected>
-	<CaptionTextColor>RGB(170,170,170)</CaptionTextColor>
-	<ListBoxOddRowsBG>RGB(51,51,51)</ListBoxOddRowsBG>
-	<ListBoxEvenRowsBG>RGB(44,44,44)</ListBoxEvenRowsBG>
-	<ListBoxOddRowsText>RGB(238,238,238)</ListBoxOddRowsText>
-	<ListBoxEvenRowsText>RGB(238,238,238)</ListBoxEvenRowsText>
-	<ListBoxSelectedBG>RGB(62,78,102)</ListBoxSelectedBG>
-	<ListBoxSelectedNoFocusBG>RGB(84,111,135)</ListBoxSelectedNoFocusBG>
-	<ListBoxSelectedText>RGB(238,238,238)</ListBoxSelectedText>
-	<ListBoxSelectedNoFocusText>RGB(238,238,238)</ListBoxSelectedNoFocusText>
-	<ClipPastedColor>RGB(245,226,169)</ClipPastedColor>
-	<MainWindowBG>RGB(68,68,68)</MainWindowBG>
-	<SearchTextBoxFocusBG>RGB(102,102,102)</SearchTextBoxFocusBG>
-	<SearchTextBoxFocusText>RGB(238,238,238)</SearchTextBoxFocusText>
-	<SearchTextBoxFocusBorder>RGB(51,51,51)</SearchTextBoxFocusBorder>
-	<SearchTextHighlight>RGB(132,240,153)</SearchTextHighlight>
-	<Border>RGB(119,119,119)</Border>
-	<BorderTopMost>RGB(34,34,34)</BorderTopMost>
-	<BorderNotConnected>RGB(237,94,94)</BorderNotConnected>
-	<GroupTreeBG>RGB(51,51,51)</GroupTreeBG>
-	<GroupTreeText>RGB(238,238,238)</GroupTreeText>
-	<CaptionSize>26</CaptionSize>
-	<CaptionFontSize>13</CaptionFontSize>
-	<DescriptionWindowBG>RGB(34,34,34)</DescriptionWindowBG>
-	<DescriptionWindowText>RGB(221,221,221)</DescriptionWindowText>
+<Ditto_Theme_File Version="3" Author="Ditto Modern" Notes="MonoDark - Modern Graphite">
+	<CaptionLeft>RGB(28, 28, 30)</CaptionLeft>
+	<CaptionRight>RGB(28, 28, 30)</CaptionRight>
+	<CaptionLeftTopMost>RGB(36, 36, 38)</CaptionLeftTopMost>
+	<CaptionRightTopMost>RGB(36, 36, 38)</CaptionRightTopMost>
+	<CaptionLeftNotConnected>RGB(120, 40, 40)</CaptionLeftNotConnected>
+	<CaptionRightNotConnected>RGB(120, 40, 40)</CaptionRightNotConnected>
+	<CaptionTextColor>RGB(235, 235, 240)</CaptionTextColor>
+	<ListBoxOddRowsBG>RGB(40, 40, 43)</ListBoxOddRowsBG>
+	<ListBoxEvenRowsBG>RGB(40, 40, 43)</ListBoxEvenRowsBG>
+	<ListBoxOddRowsText>RGB(240, 240, 243)</ListBoxOddRowsText>
+	<ListBoxEvenRowsText>RGB(240, 240, 243)</ListBoxEvenRowsText>
+	<ListBoxSelectedBG>RGB(68, 70, 76)</ListBoxSelectedBG>
+	<ListBoxSelectedNoFocusBG>RGB(52, 53, 58)</ListBoxSelectedNoFocusBG>
+	<ListBoxSelectedText>RGB(255, 255, 255)</ListBoxSelectedText>
+	<ListBoxSelectedNoFocusText>RGB(220, 220, 225)</ListBoxSelectedNoFocusText>
+	<ListCardBG>RGB(40, 40, 43)</ListCardBG>
+	<ListCardHoverBG>RGB(50, 50, 54)</ListCardHoverBG>
+	<ListCardBorder>RGB(56, 56, 60)</ListCardBorder>
+	<ListCardSelectedBorder>RGB(120, 124, 134)</ListCardSelectedBorder>
+	<ListHotKeyBadgeBG>RGB(54, 54, 58)</ListHotKeyBadgeBG>
+	<ListHotKeyBadgeText>RGB(190, 190, 198)</ListHotKeyBadgeText>
+	<ListHotKeyBadgeBorder>RGB(72, 72, 78)</ListHotKeyBadgeBorder>
+	<ClipPastedColor>RGB(245, 200, 90)</ClipPastedColor>
+	<MainWindowBG>RGB(28, 28, 30)</MainWindowBG>
+	<SearchTextBoxBG>RGB(38, 38, 41)</SearchTextBoxBG>
+	<SearchTextBoxBorder>RGB(62, 62, 66)</SearchTextBoxBorder>
+	<SearchTextBoxHoverBorder>RGB(90, 90, 96)</SearchTextBoxHoverBorder>
+	<SearchTextBoxPromptText>RGB(145, 145, 152)</SearchTextBoxPromptText>
+	<SearchTextBoxFocusBG>RGB(46, 46, 50)</SearchTextBoxFocusBG>
+	<SearchTextBoxFocusText>RGB(245, 245, 248)</SearchTextBoxFocusText>
+	<SearchTextBoxFocusBorder>RGB(150, 154, 165)</SearchTextBoxFocusBorder>
+	<SearchTextHighlight>RGB(132, 240, 153)</SearchTextHighlight>
+	<Border>RGB(56, 56, 60)</Border>
+	<BorderTopMost>RGB(110, 114, 124)</BorderTopMost>
+	<BorderNotConnected>RGB(237, 94, 94)</BorderNotConnected>
+	<GroupTreeBG>RGB(34, 34, 37)</GroupTreeBG>
+	<GroupTreeText>RGB(238, 238, 238)</GroupTreeText>
+	<CaptionSize>28</CaptionSize>
+	<CaptionFontSize>15</CaptionFontSize>
+	<DescriptionWindowBG>RGB(34, 34, 37)</DescriptionWindowBG>
+	<DescriptionWindowText>RGB(230, 230, 235)</DescriptionWindowText>
 </Ditto_Theme_File>

@@ -72,8 +72,8 @@ END_MESSAGE_MAP()
 
 BOOL CWndEx::Create(const CRect& crStart, CWnd* pParentWnd)
 {
-	WNDCLASS wc;	
-	wc.style = CS_DBLCLKS | CS_HREDRAW | CS_VREDRAW;
+	WNDCLASS wc;
+	wc.style = CS_DBLCLKS | CS_HREDRAW | CS_VREDRAW | CS_DROPSHADOW;
 	wc.lpfnWndProc = AfxWndProc;
 	wc.cbClsExtra = 0;
 	wc.cbWndExtra = 0;
@@ -83,20 +83,51 @@ BOOL CWndEx::Create(const CRect& crStart, CWnd* pParentWnd)
 	wc.hbrBackground = (HBRUSH) GetStockObject(WHITE_BRUSH);
 	wc.lpszMenuName =  NULL;
 	wc.lpszClassName = _T("QPasteClass");
-	
+
 	// Create the QPaste window class
 	if (!AfxRegisterClass(&wc))
-		return FALSE;		
-	
+		return FALSE;
+
 	return CWndEx::CreateEx(0, _T("QPasteClass"), _T("Quick Paste"), WS_POPUP,
 		crStart, pParentWnd, 0);
 }
 
-int CWndEx::OnCreate(LPCREATESTRUCT lpCreateStruct) 
+typedef HRESULT (WINAPI *pfnDwmSetWindowAttribute)(HWND, DWORD, LPCVOID, DWORD);
+
+void CWndEx::ApplyModernWindowAttributes()
+{
+	if (!GetSafeHwnd())
+		return;
+
+	HMODULE hDwm = GetModuleHandle(_T("dwmapi.dll"));
+	if (!hDwm)
+	{
+		hDwm = LoadLibrary(_T("dwmapi.dll"));
+	}
+	if (hDwm)
+	{
+		pfnDwmSetWindowAttribute pDwmSetWindowAttr = (pfnDwmSetWindowAttribute)GetProcAddress(hDwm, "DwmSetWindowAttribute");
+		if (pDwmSetWindowAttr)
+		{
+			// Win11 rounded corners: DWMWA_WINDOW_CORNER_PREFERENCE = 33, DWMWCP_ROUND = 2
+			DWORD cornerPref = 2;
+			pDwmSetWindowAttr(m_hWnd, 33, &cornerPref, sizeof(cornerPref));
+
+			// Immersive dark mode: DWMWA_USE_IMMERSIVE_DARK_MODE = 20 (or 19 on older Win10)
+			BOOL darkMode = CGetSetOptions::m_Theme.IsDarkMode() ? TRUE : FALSE;
+			if (FAILED(pDwmSetWindowAttr(m_hWnd, 20, &darkMode, sizeof(darkMode))))
+			{
+				pDwmSetWindowAttr(m_hWnd, 19, &darkMode, sizeof(darkMode));
+			}
+		}
+	}
+}
+
+int CWndEx::OnCreate(LPCREATESTRUCT lpCreateStruct)
 {
 	if (CWnd::OnCreate(lpCreateStruct) == -1)
 		return -1;
-	
+
 	m_DittoWindow.DoCreate(this);
 	m_DittoWindow.m_bDrawMinimize = false;
 	m_DittoWindow.m_bDrawMaximize = false;
@@ -107,6 +138,8 @@ int CWndEx::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		m_DittoWindow.m_dpi.Scale(lpCreateStruct->cx),
 		m_DittoWindow.m_dpi.Scale(lpCreateStruct->cy),
 		SWP_NOZORDER | SWP_NOACTIVATE);
+
+	ApplyModernWindowAttributes();
 
 	SetCaptionColorActive(false, TRUE);
 	m_DittoWindow.SetCaptionOn(this, CGetSetOptions::GetCaptionPos(), true, CGetSetOptions::m_Theme.GetCaptionSize(), CGetSetOptions::m_Theme.GetCaptionFontSize());

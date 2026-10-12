@@ -50,6 +50,8 @@ public:
 
 	int GetCaptionSize() { return m_DittoWindow.m_captionBorderWidth; }
 
+	void ApplyModernWindowAttributes();
+
 	CDittoWindow m_DittoWindow;
 
 protected:	

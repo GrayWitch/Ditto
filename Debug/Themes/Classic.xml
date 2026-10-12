@@ -1,44 +1,44 @@
-<Ditto_Theme_File Version = "3" Author = "Ditto" Notes = "">
-
-	<CaptionLeft>RGB(122, 150, 223)</CaptionLeft>
-	<CaptionRight>RGB(157, 185, 235)</CaptionRight>	
-	
-	<CaptionLeftTopMost>RGB(122, 150, 223)</CaptionLeftTopMost>
-	<CaptionRightTopMost>RGB(157, 185, 235)</CaptionRightTopMost>
-	
-	<CaptionLeftNotConnected>RGB(122, 150, 223)</CaptionLeftNotConnected>
-	<CaptionRightNotConnected>RGB(255, 255, 0)</CaptionRightNotConnected>
-	
+<?xml version="1.0" encoding="UTF-8"?>
+<Ditto_Theme_File Version="3" Author="Ditto Modern" Notes="Modern Classic Blue">
+	<CaptionLeft>RGB(37, 99, 235)</CaptionLeft>
+	<CaptionRight>RGB(37, 99, 235)</CaptionRight>
+	<CaptionLeftTopMost>RGB(29, 78, 216)</CaptionLeftTopMost>
+	<CaptionRightTopMost>RGB(29, 78, 216)</CaptionRightTopMost>
+	<CaptionLeftNotConnected>RGB(220, 38, 38)</CaptionLeftNotConnected>
+	<CaptionRightNotConnected>RGB(220, 38, 38)</CaptionRightNotConnected>
 	<CaptionTextColor>RGB(255, 255, 255)</CaptionTextColor>
-	
 	<ListBoxOddRowsBG>RGB(255, 255, 255)</ListBoxOddRowsBG>
-	<ListBoxEvenRowsBG>RGB(240, 240, 240)</ListBoxEvenRowsBG>
-	
-	<ListBoxOddRowsText>RGB(0, 0, 0)</ListBoxOddRowsText>
-	<ListBoxEvenRowsText>RGB(0, 0, 0)</ListBoxEvenRowsText>
-	
-	<ListBoxSelectedBG>RGB(30, 116, 211)</ListBoxSelectedBG>
-	<ListBoxSelectedNoFocusBG>RGB(236, 233, 216)</ListBoxSelectedNoFocusBG>
-	
+	<ListBoxEvenRowsBG>RGB(248, 250, 252)</ListBoxEvenRowsBG>
+	<ListBoxOddRowsText>RGB(15, 23, 42)</ListBoxOddRowsText>
+	<ListBoxEvenRowsText>RGB(15, 23, 42)</ListBoxEvenRowsText>
+	<ListBoxSelectedBG>RGB(37, 99, 235)</ListBoxSelectedBG>
+	<ListBoxSelectedNoFocusBG>RGB(219, 234, 254)</ListBoxSelectedNoFocusBG>
 	<ListBoxSelectedText>RGB(255, 255, 255)</ListBoxSelectedText>
-	<ListBoxSelectedNoFocusText>RGB(0, 0, 0)</ListBoxSelectedNoFocusText>	
-	
-	<Border>RGB(122, 150, 223)</Border>
-	<BorderTopMost>RGB(122, 150, 223)</BorderTopMost>
-	<BorderNotConnected>RGB(122, 150, 223)</BorderNotConnected>	
-	
-	<GroupTreeBG></GroupTreeBG>
-	<GroupTreeText></GroupTreeText>
-	
-	<CaptionSize>18</CaptionSize>
+	<ListBoxSelectedNoFocusText>RGB(30, 58, 138)</ListBoxSelectedNoFocusText>
+	<ListCardBG>RGB(255, 255, 255)</ListCardBG>
+	<ListCardHoverBG>RGB(239, 246, 255)</ListCardHoverBG>
+	<ListCardBorder>RGB(226, 232, 240)</ListCardBorder>
+	<ListCardSelectedBorder>RGB(29, 78, 216)</ListCardSelectedBorder>
+	<ListHotKeyBadgeBG>RGB(239, 246, 255)</ListHotKeyBadgeBG>
+	<ListHotKeyBadgeText>RGB(37, 99, 235)</ListHotKeyBadgeText>
+	<ListHotKeyBadgeBorder>RGB(191, 219, 254)</ListHotKeyBadgeBorder>
+	<ClipPastedColor>RGB(16, 185, 129)</ClipPastedColor>
+	<MainWindowBG>RGB(241, 245, 249)</MainWindowBG>
+	<SearchTextBoxBG>RGB(255, 255, 255)</SearchTextBoxBG>
+	<SearchTextBoxBorder>RGB(203, 213, 225)</SearchTextBoxBorder>
+	<SearchTextBoxHoverBorder>RGB(96, 165, 250)</SearchTextBoxHoverBorder>
+	<SearchTextBoxPromptText>RGB(148, 163, 184)</SearchTextBoxPromptText>
+	<SearchTextBoxFocusBG>RGB(255, 255, 255)</SearchTextBoxFocusBG>
+	<SearchTextBoxFocusText>RGB(15, 23, 42)</SearchTextBoxFocusText>
+	<SearchTextBoxFocusBorder>RGB(37, 99, 235)</SearchTextBoxFocusBorder>
+	<SearchTextHighlight>RGB(234, 88, 12)</SearchTextHighlight>
+	<Border>RGB(203, 213, 225)</Border>
+	<BorderTopMost>RGB(37, 99, 235)</BorderTopMost>
+	<BorderNotConnected>RGB(220, 38, 38)</BorderNotConnected>
+	<GroupTreeBG>RGB(248, 250, 252)</GroupTreeBG>
+	<GroupTreeText>RGB(15, 23, 42)</GroupTreeText>
+	<CaptionSize>28</CaptionSize>
 	<CaptionFontSize>15</CaptionFontSize>
-
-	<DescriptionWindowBG>RGB(255, 255, 225)</DescriptionWindowBG>
-	<DescriptionWindowText></DescriptionWindowText>
-	
-	<MainWindowBG></MainWindowBG>
-	
-	<SearchTextBoxFocusBG></SearchTextBoxFocusBG>
-	<SearchTextBoxFocusText></SearchTextBoxFocusText>
-	
+	<DescriptionWindowBG>RGB(255, 255, 255)</DescriptionWindowBG>
+	<DescriptionWindowText>RGB(15, 23, 42)</DescriptionWindowText>
 </Ditto_Theme_File>

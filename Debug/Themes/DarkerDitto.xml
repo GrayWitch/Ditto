@@ -1,44 +1,66 @@
-<Ditto_Theme_File Version="2.5" Author="Zigboom" Notes="DarkTheme">
+<Ditto_Theme_File Version="3" Author="Zigboom &amp; Ditto Modern" Notes="Modern Deep Dark Theme">
 
-	<CaptionLeft>RGB(0,0,0)</CaptionLeft>
-	<CaptionRight>RGB(51,51,51)</CaptionRight>
+	<CaptionLeft>RGB(20, 20, 20)</CaptionLeft>
+	<CaptionRight>RGB(20, 20, 20)</CaptionRight>
 
-	<CaptionLeftTopMost>RGB(0,0,0)</CaptionLeftTopMost>
-	<CaptionRightTopMost>RGB(51,51,51)</CaptionRightTopMost>
+	<CaptionLeftTopMost>RGB(20, 20, 20)</CaptionLeftTopMost>
+	<CaptionRightTopMost>RGB(20, 20, 20)</CaptionRightTopMost>
 
-	<CaptionLeftNotConnected>RGB(0,0,0)</CaptionLeftNotConnected>
-	<CaptionRightNotConnected>RGB(51,51,51)</CaptionRightNotConnected>
+	<CaptionLeftNotConnected>RGB(20, 20, 20)</CaptionLeftNotConnected>
+	<CaptionRightNotConnected>RGB(180, 83, 9)</CaptionRightNotConnected>
 
-	<CaptionTextColor>RGB(127,127,127)</CaptionTextColor>
+	<CaptionTextColor>RGB(200, 200, 200)</CaptionTextColor>
 
-	<ListBoxOddRowsBG>RGB(24,24,24)</ListBoxOddRowsBG>
-	<ListBoxEvenRowsBG>RGB(0,0,0)</ListBoxEvenRowsBG>
+	<MainWindowBG>RGB(12, 12, 12)</MainWindowBG>
 
-	<ListBoxOddRowsText>RGB(153,153,153)</ListBoxOddRowsText>
-	<ListBoxEvenRowsText>RGB(153,153,153)</ListBoxEvenRowsText>
+	<ListBoxOddRowsBG>RGB(28, 28, 28)</ListBoxOddRowsBG>
+	<ListBoxEvenRowsBG>RGB(28, 28, 28)</ListBoxEvenRowsBG>
 
-	<ListBoxSelectedBG>RGB(64,64,64)</ListBoxSelectedBG>
-	<ListBoxSelectedNoFocusBG>RGB(64,64,64)</ListBoxSelectedNoFocusBG>
+	<ListBoxOddRowsText>RGB(230, 230, 230)</ListBoxOddRowsText>
+	<ListBoxEvenRowsText>RGB(230, 230, 230)</ListBoxEvenRowsText>
 
-	<ListBoxSelectedText>RGB(238,238,238)</ListBoxSelectedText>
-	<ListBoxSelectedNoFocusText>RGB(220,220,220)</ListBoxSelectedNoFocusText>
+	<ListBoxSelectedBG>RGB(0, 114, 206)</ListBoxSelectedBG>
+	<ListBoxSelectedNoFocusBG>RGB(45, 45, 45)</ListBoxSelectedNoFocusBG>
 
-	<Border>RGB(0,0,0)</Border>
-	<BorderTopMost>RGB(0,0,0)</BorderTopMost>
-	<BorderNotConnected>RGB(255,0,0)</BorderNotConnected>
+	<ListBoxSelectedText>RGB(255, 255, 255)</ListBoxSelectedText>
+	<ListBoxSelectedNoFocusText>RGB(210, 210, 210)</ListBoxSelectedNoFocusText>
 
-	<GroupTreeBG>RGB(0,0,0)</GroupTreeBG>
-	<GroupTreeText>RGB(153,153,153)</GroupTreeText>
+	<ListCardBG>RGB(24, 24, 24)</ListCardBG>
+	<ListCardHoverBG>RGB(38, 38, 38)</ListCardHoverBG>
+	<ListCardBorder>RGB(38, 38, 38)</ListCardBorder>
+	<ListCardSelectedBorder>RGB(0, 150, 255)</ListCardSelectedBorder>
 
-	<CaptionSize></CaptionSize>
-	<CaptionFontSize></CaptionFontSize>
+	<ListHotKeyBadgeBG>RGB(40, 40, 40)</ListHotKeyBadgeBG>
+	<ListHotKeyBadgeText>RGB(200, 200, 200)</ListHotKeyBadgeText>
+	<ListHotKeyBadgeBorder>RGB(55, 55, 55)</ListHotKeyBadgeBorder>
+	<ListSmallQuickPasteIndexColor>RGB(150, 150, 150)</ListSmallQuickPasteIndexColor>
 
-	<DescriptionWindowBG>RGB(100,100,100)</DescriptionWindowBG>
-	<DescriptionWindowText>RGB(200,200,200)</DescriptionWindowText>
+	<Border>RGB(40, 40, 40)</Border>
+	<BorderTopMost>RGB(40, 40, 40)</BorderTopMost>
+	<BorderNotConnected>RGB(220, 38, 38)</BorderNotConnected>
 
-	<MainWindowBG>RGB(0,0,0)</MainWindowBG>
+	<GroupTreeBG>RGB(16, 16, 16)</GroupTreeBG>
+	<GroupTreeText>RGB(200, 200, 200)</GroupTreeText>
 
-	<SearchTextBoxFocusBG>RGB(24,24,24)</SearchTextBoxFocusBG>
-	<SearchTextBoxFocusText>RGB(127,127,127)</SearchTextBoxFocusText>
+	<CaptionSize>26</CaptionSize>
+	<CaptionFontSize>16</CaptionFontSize>
+
+	<DescriptionWindowBG>RGB(24, 24, 24)</DescriptionWindowBG>
+	<DescriptionWindowText>RGB(230, 230, 230)</DescriptionWindowText>
+
+	<SearchTextBoxBG>RGB(24, 24, 24)</SearchTextBoxBG>
+	<SearchTextBoxBorder>RGB(45, 45, 45)</SearchTextBoxBorder>
+	<SearchTextBoxHoverBorder>RGB(70, 70, 70)</SearchTextBoxHoverBorder>
+	<SearchTextBoxFocusBG>RGB(24, 24, 24)</SearchTextBoxFocusBG>
+	<SearchTextBoxFocusText>RGB(240, 240, 240)</SearchTextBoxFocusText>
+	<SearchTextBoxFocusBorder>RGB(0, 114, 206)</SearchTextBoxFocusBorder>
+	<SearchTextBoxPromptText>RGB(120, 120, 120)</SearchTextBoxPromptText>
+
+	<ClipPastedColor>RGB(16, 185, 129)</ClipPastedColor>
+	<SearchTextHighlight>RGB(245, 158, 11)</SearchTextHighlight>
+
+	<ScrollBarTrack>RGB(12, 12, 12)</ScrollBarTrack>
+	<ScrollBarThumb>RGB(65, 65, 65)</ScrollBarThumb>
+	<ScrollBarThumbHover>RGB(95, 95, 95)</ScrollBarThumbHover>
 
 </Ditto_Theme_File>

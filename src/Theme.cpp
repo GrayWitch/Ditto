@@ -20,55 +20,187 @@ CTheme::~CTheme(void)
 }
 
 
+bool CTheme::IsDarkMode() const
+{
+	double lum = 0.299 * GetRValue(m_mainWindowBG) + 0.587 * GetGValue(m_mainWindowBG) + 0.114 * GetBValue(m_mainWindowBG);
+	return lum < 128.0;
+}
+
 void CTheme::LoadDefaults()
 {
-	m_CaptionLeft = RGB(255, 255, 255);
-	m_CaptionRight = RGB(204, 204, 204);
+	bool dark = DarkAppWindows10Setting() != FALSE;
+	if (dark)
+	{
+		// Modern Fluent Dark defaults
+		m_mainWindowBG = RGB(32, 32, 32);
+		m_CaptionLeft = RGB(32, 32, 32);
+		m_CaptionRight = RGB(32, 32, 32);
+		m_CaptionLeftTopMost = RGB(32, 32, 32);
+		m_CaptionRightTopMost = RGB(32, 32, 32);
+		m_CaptionLeftNotConnected = RGB(32, 32, 32);
+		m_CaptionRightNotConnected = RGB(180, 83, 9);
+		m_CaptionTextColor = RGB(220, 220, 220);
 
-	m_Border = RGB(204, 204, 204);
-	m_BorderTopMost = RGB(204, 204, 204);
-	m_BorderNotConnected = RGB(204, 204, 204);
+		m_Border = RGB(55, 55, 55);
+		m_BorderTopMost = RGB(55, 55, 55);
+		m_BorderNotConnected = RGB(180, 83, 9);
 
-	m_CaptionLeftTopMost = RGB(255, 255, 255);
-	m_CaptionRightTopMost = RGB(204, 204, 204);
-	
-	m_CaptionLeftNotConnected = RGB(255, 255, 255);
-	m_CaptionRightNotConnected = RGB(255, 255, 0);
+		m_ListBoxOddRowsBG = RGB(43, 43, 43);
+		m_ListBoxEvenRowsBG = RGB(43, 43, 43);
+		m_ListBoxOddRowsText = RGB(235, 235, 235);
+		m_ListBoxEvenRowsText = RGB(235, 235, 235);
 
-	m_CaptionTextColor = RGB(191, 191, 191);
-	m_ListBoxOddRowsBG = RGB(255, 255, 255);
-	m_ListBoxEvenRowsBG = RGB(243, 243, 243);
-	m_ListBoxOddRowsText = RGB(0, 0, 0);
-	m_ListBoxEvenRowsText = RGB(0, 0, 0);
-	m_ListBoxSelectedBG = RGB(204, 204, 204);
-	m_ListBoxSelectedNoFocusBG = RGB(204, 204, 204);
-	m_ListBoxSelectedText = RGB(0, 0, 0);
-	m_ListBoxSelectedNoFocusText = RGB(0, 0, 0);
-	m_clipPastedColor = RGB(0, 255, 0);
-	m_listSmallQuickPasteIndexColor = RGB(180, 180, 180);
-	m_mainWindowBG = RGB(240, 240, 240);
-	m_searchTextBoxFocusBG = RGB(255, 255, 255);
-	m_searchTextBoxFocusText = RGB(0, 0, 0);
-	m_searchTextBoxFocusBorder = RGB(255, 255, 255);
-	m_searchTextHighlight = RGB(255, 0, 0);
+		m_ListBoxSelectedBG = RGB(0, 120, 215);
+		m_ListBoxSelectedNoFocusBG = RGB(60, 60, 60);
+		m_ListBoxSelectedText = RGB(255, 255, 255);
+		m_ListBoxSelectedNoFocusText = RGB(220, 220, 220);
 
-	m_groupTreeBG = RGB(240, 240, 240);
-	m_groupTreeText = RGB(127, 127, 127);
+		m_listCardBG = RGB(43, 43, 43);
+		m_listCardHoverBG = RGB(54, 54, 54);
+		m_listCardBorder = RGB(52, 52, 52);
+		m_listCardSelectedBorder = RGB(0, 150, 255);
 
-	m_descriptionWindowBG = RGB(240, 240, 240);// GetSysColor(COLOR_INFOBK);//RGB(240, 240, 240);//
-	/*int r = GetRValue(m_descriptionWindowBG);
-	int g = GetGValue(m_descriptionWindowBG);
-	int b = GetBValue(m_descriptionWindowBG);*/
+		m_listHotKeyBadgeBG = RGB(55, 55, 55);
+		m_listHotKeyBadgeText = RGB(210, 210, 210);
+		m_listHotKeyBadgeBorder = RGB(70, 70, 70);
+		m_listSmallQuickPasteIndexColor = RGB(160, 160, 160);
 
-	m_descriptionWindowText = RGB(0, 0, 0);
+		m_clipPastedColor = RGB(16, 185, 129);
+		m_searchTextHighlight = RGB(245, 158, 11);
 
-	// Modern scrollbar defaults - rounded look
-	m_scrollBarThumb = RGB(180, 180, 180);
-	m_scrollBarThumbHover = RGB(140, 140, 140);
-	m_scrollBarTrack = RGB(240, 240, 240);
+		m_searchTextBoxBG = RGB(43, 43, 43);
+		m_searchTextBoxBorder = RGB(65, 65, 65);
+		m_searchTextBoxHoverBorder = RGB(95, 95, 95);
+		m_searchTextBoxFocusBG = RGB(43, 43, 43);
+		m_searchTextBoxFocusBorder = RGB(0, 120, 215);
+		m_searchTextBoxFocusText = RGB(255, 255, 255);
+		m_searchTextBoxPromptText = RGB(140, 140, 140);
+
+		m_groupTreeBG = RGB(32, 32, 32);
+		m_groupTreeText = RGB(200, 200, 200);
+
+		m_descriptionWindowBG = RGB(40, 40, 40);
+		m_descriptionWindowText = RGB(235, 235, 235);
+
+		m_scrollBarThumb = RGB(85, 85, 85);
+		m_scrollBarThumbHover = RGB(115, 115, 115);
+		m_scrollBarTrack = RGB(32, 32, 32);
+	}
+	else
+	{
+		// Modern Fluent Light defaults
+		m_mainWindowBG = RGB(243, 243, 243);
+		m_CaptionLeft = RGB(243, 243, 243);
+		m_CaptionRight = RGB(243, 243, 243);
+		m_CaptionLeftTopMost = RGB(243, 243, 243);
+		m_CaptionRightTopMost = RGB(243, 243, 243);
+		m_CaptionLeftNotConnected = RGB(243, 243, 243);
+		m_CaptionRightNotConnected = RGB(245, 158, 11);
+		m_CaptionTextColor = RGB(40, 40, 40);
+
+		m_Border = RGB(218, 218, 218);
+		m_BorderTopMost = RGB(218, 218, 218);
+		m_BorderNotConnected = RGB(245, 158, 11);
+
+		m_ListBoxOddRowsBG = RGB(255, 255, 255);
+		m_ListBoxEvenRowsBG = RGB(255, 255, 255);
+		m_ListBoxOddRowsText = RGB(25, 25, 25);
+		m_ListBoxEvenRowsText = RGB(25, 25, 25);
+
+		m_ListBoxSelectedBG = RGB(0, 120, 215);
+		m_ListBoxSelectedNoFocusBG = RGB(225, 228, 232);
+		m_ListBoxSelectedText = RGB(255, 255, 255);
+		m_ListBoxSelectedNoFocusText = RGB(40, 40, 40);
+
+		m_listCardBG = RGB(255, 255, 255);
+		m_listCardHoverBG = RGB(246, 248, 250);
+		m_listCardBorder = RGB(228, 230, 235);
+		m_listCardSelectedBorder = RGB(0, 103, 192);
+
+		m_listHotKeyBadgeBG = RGB(240, 242, 245);
+		m_listHotKeyBadgeText = RGB(75, 85, 99);
+		m_listHotKeyBadgeBorder = RGB(215, 220, 228);
+		m_listSmallQuickPasteIndexColor = RGB(120, 120, 120);
+
+		m_clipPastedColor = RGB(16, 185, 129);
+		m_searchTextHighlight = RGB(245, 158, 11);
+
+		m_searchTextBoxBG = RGB(255, 255, 255);
+		m_searchTextBoxBorder = RGB(215, 218, 224);
+		m_searchTextBoxHoverBorder = RGB(180, 185, 195);
+		m_searchTextBoxFocusBG = RGB(255, 255, 255);
+		m_searchTextBoxFocusBorder = RGB(0, 120, 215);
+		m_searchTextBoxFocusText = RGB(25, 25, 25);
+		m_searchTextBoxPromptText = RGB(130, 135, 145);
+
+		m_groupTreeBG = RGB(243, 243, 243);
+		m_groupTreeText = RGB(80, 80, 80);
+
+		m_descriptionWindowBG = RGB(255, 255, 255);
+		m_descriptionWindowText = RGB(25, 25, 25);
+
+		m_scrollBarThumb = RGB(195, 195, 195);
+		m_scrollBarThumbHover = RGB(155, 155, 155);
+		m_scrollBarTrack = RGB(243, 243, 243);
+	}
 
 	m_captionSize = 25;
 	m_captionFontSize = 19;
+}
+
+void CTheme::ApplyFallbacks()
+{
+	bool dark = IsDarkMode();
+	if (m_listCardBG == (COLORREF)-1)
+	{
+		m_listCardBG = m_ListBoxOddRowsBG;
+	}
+	if (m_listCardHoverBG == (COLORREF)-1)
+	{
+		if (dark)
+			m_listCardHoverBG = RGB(min(255, GetRValue(m_listCardBG) + 16), min(255, GetGValue(m_listCardBG) + 16), min(255, GetBValue(m_listCardBG) + 16));
+		else
+			m_listCardHoverBG = RGB(max(0, GetRValue(m_listCardBG) - 10), max(0, GetGValue(m_listCardBG) - 10), max(0, GetBValue(m_listCardBG) - 10));
+	}
+	if (m_listCardBorder == (COLORREF)-1)
+	{
+		if (dark)
+			m_listCardBorder = RGB(min(255, GetRValue(m_listCardBG) + 18), min(255, GetGValue(m_listCardBG) + 18), min(255, GetBValue(m_listCardBG) + 18));
+		else
+			m_listCardBorder = RGB(max(0, GetRValue(m_listCardBG) - 25), max(0, GetGValue(m_listCardBG) - 25), max(0, GetBValue(m_listCardBG) - 25));
+	}
+	if (m_listCardSelectedBorder == (COLORREF)-1)
+	{
+		m_listCardSelectedBorder = m_ListBoxSelectedBG;
+	}
+	if (m_listHotKeyBadgeBG == (COLORREF)-1)
+	{
+		m_listHotKeyBadgeBG = dark ? RGB(55, 55, 55) : RGB(240, 242, 245);
+	}
+	if (m_listHotKeyBadgeText == (COLORREF)-1)
+	{
+		m_listHotKeyBadgeText = dark ? RGB(210, 210, 210) : RGB(75, 85, 99);
+	}
+	if (m_listHotKeyBadgeBorder == (COLORREF)-1)
+	{
+		m_listHotKeyBadgeBorder = dark ? RGB(75, 75, 75) : RGB(215, 220, 228);
+	}
+	if (m_searchTextBoxBG == (COLORREF)-1)
+	{
+		m_searchTextBoxBG = m_searchTextBoxFocusBG;
+	}
+	if (m_searchTextBoxBorder == (COLORREF)-1)
+	{
+		m_searchTextBoxBorder = m_Border;
+	}
+	if (m_searchTextBoxHoverBorder == (COLORREF)-1)
+	{
+		m_searchTextBoxHoverBorder = m_searchTextBoxFocusBorder;
+	}
+	if (m_searchTextBoxPromptText == (COLORREF)-1)
+	{
+		m_searchTextBoxPromptText = dark ? RGB(140, 140, 140) : RGB(130, 135, 145);
+	}
 }
 
 bool CTheme::Load(CString csTheme, bool bHeaderOnly, bool bCheckLastWriteTime)
@@ -190,6 +322,33 @@ bool CTheme::Load(CString csTheme, bool bHeaderOnly, bool bCheckLastWriteTime)
 	LoadColor(ItemHeader, "ScrollBarThumb", m_scrollBarThumb);
 	LoadColor(ItemHeader, "ScrollBarThumbHover", m_scrollBarThumbHover);
 	LoadColor(ItemHeader, "ScrollBarTrack", m_scrollBarTrack);
+
+	// Modern card & badge colors (fallback gracefully if not present in legacy theme)
+	m_listCardBG = (COLORREF)-1;
+	m_listCardHoverBG = (COLORREF)-1;
+	m_listCardBorder = (COLORREF)-1;
+	m_listCardSelectedBorder = (COLORREF)-1;
+	m_listHotKeyBadgeBG = (COLORREF)-1;
+	m_listHotKeyBadgeText = (COLORREF)-1;
+	m_listHotKeyBadgeBorder = (COLORREF)-1;
+	m_searchTextBoxBG = (COLORREF)-1;
+	m_searchTextBoxBorder = (COLORREF)-1;
+	m_searchTextBoxHoverBorder = (COLORREF)-1;
+	m_searchTextBoxPromptText = (COLORREF)-1;
+
+	LoadColor(ItemHeader, "ListCardBG", m_listCardBG);
+	LoadColor(ItemHeader, "ListCardHoverBG", m_listCardHoverBG);
+	LoadColor(ItemHeader, "ListCardBorder", m_listCardBorder);
+	LoadColor(ItemHeader, "ListCardSelectedBorder", m_listCardSelectedBorder);
+	LoadColor(ItemHeader, "ListHotKeyBadgeBG", m_listHotKeyBadgeBG);
+	LoadColor(ItemHeader, "ListHotKeyBadgeText", m_listHotKeyBadgeText);
+	LoadColor(ItemHeader, "ListHotKeyBadgeBorder", m_listHotKeyBadgeBorder);
+	LoadColor(ItemHeader, "SearchTextBoxBG", m_searchTextBoxBG);
+	LoadColor(ItemHeader, "SearchTextBoxBorder", m_searchTextBoxBorder);
+	LoadColor(ItemHeader, "SearchTextBoxHoverBorder", m_searchTextBoxHoverBorder);
+	LoadColor(ItemHeader, "SearchTextBoxPromptText", m_searchTextBoxPromptText);
+
+	ApplyFallbacks();
 
 	if (followWindows10Theme)
 	{

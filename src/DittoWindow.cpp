@@ -6,9 +6,9 @@
 
 CDittoWindow::CDittoWindow(void)
 {
-	m_captionBorderWidth = m_dpi.Scale(25);
+	m_captionBorderWidth = m_dpi.Scale(26);
 
-	m_borderSize = 2;
+	m_borderSize = 1;
 	m_bMouseOverChevron = false;
 	m_bMouseDownOnChevron = false;
 	m_bMouseDownOnClose = false;
@@ -250,7 +250,7 @@ void CDittoWindow::DoNcPaint(CWnd *pWnd)
 	// Draw the window border
 	CRect rcBorder(0, 0, lWidth, rcFrame.Height());
 
-	int border = m_dpi.Scale(2);
+	int border = max(1, m_dpi.Scale(1));
 	int widthHeight = m_dpi.Scale(16);
 
 	for (int x = 0; x < border; x++)
@@ -400,14 +400,19 @@ void CDittoWindow::DoNcPaint(CWnd *pWnd)
 	}
 
 
+	CRect fullCaptionRect;
+	fullCaptionRect.UnionRect(&leftRect, &rightRect);
+
 	HBRUSH leftColor = CreateSolidBrush(m_CaptionColorLeft);
-	HBRUSH rightColor = CreateSolidBrush(m_CaptionColorRight);	
-
-	::FillRect(dc, &leftRect, leftColor);
-	::FillRect(dc, &rightRect, rightColor);
-
+	::FillRect(dc, &fullCaptionRect, leftColor);
 	DeleteObject(leftColor);
-	DeleteObject(rightColor);
+
+	if (m_CaptionColorLeft != m_CaptionColorRight)
+	{
+		HBRUSH rightColor = CreateSolidBrush(m_CaptionColorRight);
+		::FillRect(dc, &rightRect, rightColor);
+		DeleteObject(rightColor);
+	}
 
 
 	int nOldBKMode = dc.SetBkMode(TRANSPARENT);
@@ -466,7 +471,17 @@ void CDittoWindow::DrawChevronBtn(CWindowDC &dc, CWnd *pWnd)
 	{
 		return;
 	}
-		
+
+	if (m_bMouseOverChevron || m_bMouseDownOnChevron)
+	{
+		CRect hoverRect = m_crChevronBT;
+		hoverRect.InflateRect(m_dpi.Scale(2), m_dpi.Scale(2));
+		COLORREF hoverColor = CGetSetOptions::m_Theme.IsDarkMode() ? RGB(60, 60, 65) : RGB(220, 224, 230);
+		HBRUSH hBr = CreateSolidBrush(hoverColor);
+		::FillRect(dc, &hoverRect, hBr);
+		DeleteObject(hBr);
+	}
+
 	if(this->m_bMinimized)
 	{
 		m_chevronLeftButton.Draw(&dc, m_dpi, pWnd, m_crChevronBT, m_bMouseOverChevron, m_bMouseDownOnChevron);
@@ -488,7 +503,17 @@ void CDittoWindow::DrawCloseBtn(CWindowDC &dc, CWnd *pWnd)
 	{
 		return;
 	}
-	
+
+	if (m_bMouseOverClose || m_bMouseDownOnClose)
+	{
+		CRect hoverRect = m_crCloseBT;
+		hoverRect.InflateRect(m_dpi.Scale(2), m_dpi.Scale(2));
+		COLORREF hoverColor = m_bMouseDownOnClose ? RGB(196, 43, 28) : RGB(232, 17, 35);
+		HBRUSH hBr = CreateSolidBrush(hoverColor);
+		::FillRect(dc, &hoverRect, hBr);
+		DeleteObject(hBr);
+	}
+
 	m_closeButton.Draw(&dc, m_dpi, pWnd, m_crCloseBT, m_bMouseOverClose, m_bMouseDownOnClose);
 }
 

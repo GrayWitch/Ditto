@@ -1,44 +1,44 @@
-<Ditto_Theme_File Version="3" Author="Yaroslav Kargin" Notes="Terminal like theme">
-
-	<CaptionLeft>RGB(20, 20, 20)</CaptionLeft>
-	<CaptionRight>RGB(20, 20, 20)</CaptionRight>	
-	
-	<CaptionLeftTopMost>RGB(20, 20, 20)</CaptionLeftTopMost>
-	<CaptionRightTopMost>RGB(20, 20, 20)</CaptionRightTopMost>
-	
-	<CaptionLeftNotConnected>RGB(20, 20, 20)</CaptionLeftNotConnected>
-	<CaptionRightNotConnected>RGB(20, 20, 20)</CaptionRightNotConnected>
-	
-	<CaptionTextColor>RGB(255, 255, 255)</CaptionTextColor>
-	
-	<ListBoxOddRowsBG>RGB(0, 0, 0)</ListBoxOddRowsBG>
-	<ListBoxEvenRowsBG>RGB(0, 0, 0)</ListBoxEvenRowsBG>
-	
-	<ListBoxOddRowsText>RGB(12, 155, 12)</ListBoxOddRowsText>
-	<ListBoxEvenRowsText>RGB(12, 155, 12)</ListBoxEvenRowsText>
-	
-	<ListBoxSelectedBG>RGB(0, 0, 0)</ListBoxSelectedBG>
-	<ListBoxSelectedNoFocusBG>RGB(12, 12, 12)</ListBoxSelectedNoFocusBG>
-	
-	<ListBoxSelectedText>RGB(44, 241, 41)</ListBoxSelectedText>
-	<ListBoxSelectedNoFocusText>RGB(44, 241, 41)</ListBoxSelectedNoFocusText>	
-	
-	<Border>RGB(0, 15, 0)</Border>
-	<BorderTopMost>RGB(0, 15, 0)</BorderTopMost>
-	<BorderNotConnected>RGB(0, 15, 0)</BorderNotConnected>
-	
-	<GroupTreeBG>RGB(0, 0, 0)</GroupTreeBG>
-	<GroupTreeText></GroupTreeText>
-	
-	<CaptionSize>18</CaptionSize>
+<?xml version="1.0" encoding="UTF-8"?>
+<Ditto_Theme_File Version="3" Author="Ditto Modern" Notes="Modern Matrix Terminal">
+	<CaptionLeft>RGB(13, 17, 23)</CaptionLeft>
+	<CaptionRight>RGB(13, 17, 23)</CaptionRight>
+	<CaptionLeftTopMost>RGB(18, 26, 22)</CaptionLeftTopMost>
+	<CaptionRightTopMost>RGB(18, 26, 22)</CaptionRightTopMost>
+	<CaptionLeftNotConnected>RGB(90, 24, 24)</CaptionLeftNotConnected>
+	<CaptionRightNotConnected>RGB(90, 24, 24)</CaptionRightNotConnected>
+	<CaptionTextColor>RGB(63, 185, 80)</CaptionTextColor>
+	<ListBoxOddRowsBG>RGB(22, 27, 34)</ListBoxOddRowsBG>
+	<ListBoxEvenRowsBG>RGB(22, 27, 34)</ListBoxEvenRowsBG>
+	<ListBoxOddRowsText>RGB(126, 231, 135)</ListBoxOddRowsText>
+	<ListBoxEvenRowsText>RGB(126, 231, 135)</ListBoxEvenRowsText>
+	<ListBoxSelectedBG>RGB(25, 58, 38)</ListBoxSelectedBG>
+	<ListBoxSelectedNoFocusBG>RGB(20, 42, 29)</ListBoxSelectedNoFocusBG>
+	<ListBoxSelectedText>RGB(180, 255, 190)</ListBoxSelectedText>
+	<ListBoxSelectedNoFocusText>RGB(126, 231, 135)</ListBoxSelectedNoFocusText>
+	<ListCardBG>RGB(22, 27, 34)</ListCardBG>
+	<ListCardHoverBG>RGB(28, 36, 44)</ListCardHoverBG>
+	<ListCardBorder>RGB(35, 52, 42)</ListCardBorder>
+	<ListCardSelectedBorder>RGB(63, 185, 80)</ListCardSelectedBorder>
+	<ListHotKeyBadgeBG>RGB(26, 38, 32)</ListHotKeyBadgeBG>
+	<ListHotKeyBadgeText>RGB(86, 211, 100)</ListHotKeyBadgeText>
+	<ListHotKeyBadgeBorder>RGB(46, 90, 56)</ListHotKeyBadgeBorder>
+	<ClipPastedColor>RGB(63, 185, 80)</ClipPastedColor>
+	<MainWindowBG>RGB(13, 17, 23)</MainWindowBG>
+	<SearchTextBoxBG>RGB(22, 27, 34)</SearchTextBoxBG>
+	<SearchTextBoxBorder>RGB(48, 54, 61)</SearchTextBoxBorder>
+	<SearchTextBoxHoverBorder>RGB(63, 185, 80)</SearchTextBoxHoverBorder>
+	<SearchTextBoxPromptText>RGB(88, 126, 98)</SearchTextBoxPromptText>
+	<SearchTextBoxFocusBG>RGB(18, 24, 30)</SearchTextBoxFocusBG>
+	<SearchTextBoxFocusText>RGB(126, 231, 135)</SearchTextBoxFocusText>
+	<SearchTextBoxFocusBorder>RGB(63, 185, 80)</SearchTextBoxFocusBorder>
+	<SearchTextHighlight>RGB(255, 215, 0)</SearchTextHighlight>
+	<Border>RGB(48, 54, 61)</Border>
+	<BorderTopMost>RGB(63, 185, 80)</BorderTopMost>
+	<BorderNotConnected>RGB(248, 81, 73)</BorderNotConnected>
+	<GroupTreeBG>RGB(13, 17, 23)</GroupTreeBG>
+	<GroupTreeText>RGB(126, 231, 135)</GroupTreeText>
+	<CaptionSize>28</CaptionSize>
 	<CaptionFontSize>15</CaptionFontSize>
-
-	<DescriptionWindowBG>RGB(0, 0, 0)</DescriptionWindowBG>
-	<DescriptionWindowText></DescriptionWindowText>
-	
-	<MainWindowBG>RGB(20, 20, 20)</MainWindowBG>
-	
-	<SearchTextBoxFocusBG>RGB(20, 20, 20)</SearchTextBoxFocusBG>
-	<SearchTextBoxFocusText>RGB(44, 241, 41)</SearchTextBoxFocusText>
-	
+	<DescriptionWindowBG>RGB(18, 23, 30)</DescriptionWindowBG>
+	<DescriptionWindowText>RGB(126, 231, 135)</DescriptionWindowText>
 </Ditto_Theme_File>

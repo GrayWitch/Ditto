@@ -8117,10 +8117,13 @@ void CQPasteWnd::RefreshThemeColors()
 	// Refresh caption bar colors
 	SetCaptionColorActive(CGetSetOptions::m_bShowPersistent, theApp.GetConnectCV());
 	SetCaptionOn(CGetSetOptions::GetCaptionPos(), true, CGetSetOptions::m_Theme.GetCaptionSize(), CGetSetOptions::m_Theme.GetCaptionFontSize());
-	
+
 	// Refresh scrollbar colors
 	RefreshScrollBarColors();
-	
+
+	// Refresh modern window attributes (DWM dark mode & Win11 corners)
+	ApplyModernWindowAttributes();
+
 	// Force repaint of the entire window including non-client area
 	SetWindowPos(NULL, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_FRAMECHANGED);
 	RedrawWindow(NULL, NULL, RDW_INVALIDATE | RDW_UPDATENOW | RDW_ALLCHILDREN | RDW_FRAME);

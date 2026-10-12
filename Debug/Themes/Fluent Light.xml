@@ -1,0 +1,70 @@
+<Ditto_Theme_File Version = "3" Author = "Ditto Modern" Notes = "Windows 11 Fluent Light Modern Theme">
+
+	<CaptionLeft>RGB(243, 243, 243)</CaptionLeft>
+	<CaptionRight>RGB(243, 243, 243)</CaptionRight>
+
+	<CaptionLeftTopMost>RGB(243, 243, 243)</CaptionLeftTopMost>
+	<CaptionRightTopMost>RGB(243, 243, 243)</CaptionRightTopMost>
+
+	<CaptionLeftNotConnected>RGB(243, 243, 243)</CaptionLeftNotConnected>
+	<CaptionRightNotConnected>RGB(245, 158, 11)</CaptionRightNotConnected>
+
+	<CaptionTextColor>RGB(39, 39, 42)</CaptionTextColor>
+
+	<MainWindowBG>RGB(244, 244, 245)</MainWindowBG>
+
+	<ListBoxOddRowsBG>RGB(255, 255, 255)</ListBoxOddRowsBG>
+	<ListBoxEvenRowsBG>RGB(255, 255, 255)</ListBoxEvenRowsBG>
+
+	<ListBoxOddRowsText>RGB(24, 24, 27)</ListBoxOddRowsText>
+	<ListBoxEvenRowsText>RGB(24, 24, 27)</ListBoxEvenRowsText>
+
+	<ListBoxSelectedBG>RGB(0, 120, 215)</ListBoxSelectedBG>
+	<ListBoxSelectedNoFocusBG>RGB(228, 228, 231)</ListBoxSelectedNoFocusBG>
+
+	<ListBoxSelectedText>RGB(255, 255, 255)</ListBoxSelectedText>
+	<ListBoxSelectedNoFocusText>RGB(39, 39, 42)</ListBoxSelectedNoFocusText>
+
+	<!-- Floating Card styling -->
+	<ListCardBG>RGB(255, 255, 255)</ListCardBG>
+	<ListCardHoverBG>RGB(248, 250, 252)</ListCardHoverBG>
+	<ListCardBorder>RGB(228, 231, 236)</ListCardBorder>
+	<ListCardSelectedBorder>RGB(0, 103, 192)</ListCardSelectedBorder>
+
+	<!-- Keycap badge styling -->
+	<ListHotKeyBadgeBG>RGB(241, 245, 249)</ListHotKeyBadgeBG>
+	<ListHotKeyBadgeText>RGB(71, 85, 105)</ListHotKeyBadgeText>
+	<ListHotKeyBadgeBorder>RGB(218, 224, 233)</ListHotKeyBadgeBorder>
+	<ListSmallQuickPasteIndexColor>RGB(110, 120, 135)</ListSmallQuickPasteIndexColor>
+
+	<Border>RGB(218, 222, 229)</Border>
+	<BorderTopMost>RGB(218, 222, 229)</BorderTopMost>
+	<BorderNotConnected>RGB(245, 158, 11)</BorderNotConnected>
+
+	<GroupTreeBG>RGB(244, 244, 245)</GroupTreeBG>
+	<GroupTreeText>RGB(71, 85, 105)</GroupTreeText>
+
+	<CaptionSize>26</CaptionSize>
+	<CaptionFontSize>16</CaptionFontSize>
+
+	<DescriptionWindowBG>RGB(255, 255, 255)</DescriptionWindowBG>
+	<DescriptionWindowText>RGB(24, 24, 27)</DescriptionWindowText>
+
+	<!-- Search box styling -->
+	<SearchTextBoxBG>RGB(255, 255, 255)</SearchTextBoxBG>
+	<SearchTextBoxBorder>RGB(214, 219, 228)</SearchTextBoxBorder>
+	<SearchTextBoxHoverBorder>RGB(180, 188, 202)</SearchTextBoxHoverBorder>
+	<SearchTextBoxFocusBG>RGB(255, 255, 255)</SearchTextBoxFocusBG>
+	<SearchTextBoxFocusText>RGB(24, 24, 27)</SearchTextBoxFocusText>
+	<SearchTextBoxFocusBorder>RGB(0, 120, 215)</SearchTextBoxFocusBorder>
+	<SearchTextBoxPromptText>RGB(148, 163, 184)</SearchTextBoxPromptText>
+
+	<ClipPastedColor>RGB(16, 185, 129)</ClipPastedColor>
+	<SearchTextHighlight>RGB(245, 158, 11)</SearchTextHighlight>
+
+	<!-- Scroll bar -->
+	<ScrollBarTrack>RGB(244, 244, 245)</ScrollBarTrack>
+	<ScrollBarThumb>RGB(203, 213, 225)</ScrollBarThumb>
+	<ScrollBarThumbHover>RGB(148, 163, 184)</ScrollBarThumbHover>
+
+</Ditto_Theme_File>

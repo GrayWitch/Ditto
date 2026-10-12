@@ -175,6 +175,7 @@ protected:
     COLORREF HslToRgb(double h, double s, double l);
 		
 	void DrawCheckerboard(CDC* pDC, CRect rect);
+	void DrawRoundedCard(CDC* pDC, CRect rect, int radius, COLORREF fillColor, COLORREF borderColor);
 	WCHAR *m_pwchTip;
 	TCHAR *m_pchTip;
 	HFONT m_SmallFont;
@@ -189,6 +190,8 @@ protected:
 	int m_linesPerRow;
 	DWORD m_mouseOverScrollAreaStart;
 	bool m_timerToHideScrollAreaSet;
+	int m_hoverItem;
+	bool m_bTrackingMouseLeave;
 	CGdiImageDrawer m_groupFolder;
 	CGdiImageDrawer m_dontDeleteImage;
 	CGdiImageDrawer m_inFolderImage;
@@ -219,6 +222,7 @@ protected:
 	afx_msg BOOL OnToolTipText(UINT id, NMHDR * pNMHDR, LRESULT * pResult);
 	afx_msg void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
+	afx_msg void OnMouseLeave();
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnKillFocus(CWnd* pNewWnd);
