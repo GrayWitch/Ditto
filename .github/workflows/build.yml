@@ -10,6 +10,9 @@ on:
 env:
   SOLUTION_FILE_PATH: CP_Main_10.sln
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: windows-latest

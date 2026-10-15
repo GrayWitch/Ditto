@@ -26,10 +26,10 @@ CDittoWindow::CDittoWindow(void)
 	m_crChevronBT.SetRectEmpty();
 	m_crMaximizeBT.SetRectEmpty();
 	m_crMinimizeBT.SetRectEmpty();
-	m_CaptionColorLeft = RGB(255, 255, 255);
-	m_CaptionColorRight = RGB(204, 204, 204);
-	m_CaptionTextColor = RGB(191, 191, 191);
-	m_border = RGB(204, 204, 204);
+	m_CaptionColorLeft = RGB(32, 32, 32);
+	m_CaptionColorRight = RGB(32, 32, 32);
+	m_CaptionTextColor = RGB(220, 220, 220);
+	m_border = RGB(52, 52, 58);
 	m_sendWMClose = true;
 	m_customWindowTitle = _T("");
 	m_useCustomWindowTitle = false;

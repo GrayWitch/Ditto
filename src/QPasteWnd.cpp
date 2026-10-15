@@ -993,6 +993,8 @@ BOOL CQPasteWnd::ShowQPasteWindow(BOOL bFillList)
 	SetCaptionColorActive(CGetSetOptions::m_bShowPersistent, theApp.GetConnectCV());
 	SetCaptionOn(CGetSetOptions::GetCaptionPos(), true, CGetSetOptions::m_Theme.GetCaptionSize(), CGetSetOptions::m_Theme.GetCaptionFontSize());
 
+	ApplyModernWindowAttributes();
+
 	UpdateStatus();
 
 	m_bHideWnd = true;

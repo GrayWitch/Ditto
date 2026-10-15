@@ -80,7 +80,7 @@ BOOL CWndEx::Create(const CRect& crStart, CWnd* pParentWnd)
 	wc.hInstance = AfxGetInstanceHandle();
 	wc.hIcon = NULL;
 	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
-	wc.hbrBackground = (HBRUSH) GetStockObject(WHITE_BRUSH);
+	wc.hbrBackground = NULL;
 	wc.lpszMenuName =  NULL;
 	wc.lpszClassName = _T("QPasteClass");
 
@@ -119,6 +119,12 @@ void CWndEx::ApplyModernWindowAttributes()
 			{
 				pDwmSetWindowAttr(m_hWnd, 19, &darkMode, sizeof(darkMode));
 			}
+
+			// Win11 border color: DWMWA_BORDER_COLOR = 34
+			// Explicitly lock border color to theme border, preventing Windows 11 DWM from drawing an inactive white border
+			COLORREF borderColor = CGetSetOptions::m_bShowPersistent ?
+				CGetSetOptions::m_Theme.BorderTopMost() : CGetSetOptions::m_Theme.Border();
+			pDwmSetWindowAttr(m_hWnd, 34, &borderColor, sizeof(borderColor));
 		}
 	}
 }
@@ -176,6 +182,8 @@ bool CWndEx::SetCaptionColorActive(BOOL bPersistant, BOOL ConnectedToClipboard)
 	}
 
 	m_DittoWindow.SetCaptionTextColor(CGetSetOptions::m_Theme.CaptionTextColor());
+
+	ApplyModernWindowAttributes();
 
 	return bResult;
 }
