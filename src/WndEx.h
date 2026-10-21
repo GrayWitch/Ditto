@@ -79,6 +79,7 @@ protected:
 	afx_msg void OnTimer(UINT_PTR nIDEvent);
 	afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 	afx_msg void OnInitMenuPopup(CMenu *pPopupMenu, UINT nIndex,BOOL bSysMenu);
+	afx_msg BOOL OnNcActivate(BOOL bActive);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 public:

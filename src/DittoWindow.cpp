@@ -250,7 +250,7 @@ void CDittoWindow::DoNcPaint(CWnd *pWnd)
 	// Draw the window border
 	CRect rcBorder(0, 0, lWidth, rcFrame.Height());
 
-	int border = max(1, m_dpi.Scale(1));
+	int border = m_borderSize;
 	int widthHeight = m_dpi.Scale(16);
 
 	for (int x = 0; x < border; x++)
@@ -910,7 +910,7 @@ void CDittoWindow::OnDpiChanged(CWnd *pParent, int dpi)
 	m_dpi.Update(dpi);
 
 	m_captionBorderWidth = m_dpi.Scale(25);
-	m_borderSize = m_dpi.Scale(2);
+	m_borderSize = max(1, m_dpi.Scale(1));
 
 	m_VertFont.DeleteObject();
 	m_HorFont.DeleteObject();

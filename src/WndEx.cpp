@@ -59,7 +59,8 @@ BEGIN_MESSAGE_MAP(CWndEx, CWnd)
 	ON_WM_ERASEBKGND()
 	ON_WM_TIMER()
 	ON_WM_WINDOWPOSCHANGING()
-	ON_WM_INITMENUPOPUP() 
+	ON_WM_INITMENUPOPUP()
+	ON_WM_NCACTIVATE()
 //}}AFX_MSG_MAP
 ON_WM_SIZE()
 ON_WM_MOVING()
@@ -73,7 +74,7 @@ END_MESSAGE_MAP()
 BOOL CWndEx::Create(const CRect& crStart, CWnd* pParentWnd)
 {
 	WNDCLASS wc;
-	wc.style = CS_DBLCLKS | CS_HREDRAW | CS_VREDRAW | CS_DROPSHADOW;
+	wc.style = CS_DBLCLKS | CS_HREDRAW | CS_VREDRAW;
 	wc.lpfnWndProc = AfxWndProc;
 	wc.cbClsExtra = 0;
 	wc.cbWndExtra = 0;
@@ -271,9 +272,18 @@ BOOL CWndEx::PreTranslateMessage(MSG* pMsg)
 	return CWnd::PreTranslateMessage(pMsg);
 }
 
-BOOL CWndEx::OnEraseBkgnd(CDC* pDC) 
+BOOL CWndEx::OnEraseBkgnd(CDC* pDC)
 {
-	return CWnd::OnEraseBkgnd(pDC);
+	CRect rect;
+	GetClientRect(&rect);
+	pDC->FillSolidRect(rect, CGetSetOptions::m_Theme.MainWindowBG());
+	return TRUE;
+}
+
+BOOL CWndEx::OnNcActivate(BOOL bActive)
+{
+	m_DittoWindow.DoNcPaint(this);
+	return TRUE;
 }
 
 void CWndEx::OnTimer(UINT_PTR nIDEvent)
